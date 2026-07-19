@@ -1,0 +1,101 @@
+body {
+  background: linear-gradient(135deg, #d8a039, rgb(255, 255, 255), #e2cd64);
+  min-height: 100vh;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+.hero {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url(./crestwoodimage.png); */
+  /* filter: blur(1px); */
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
+    url(./crestwoodimage.png);
+}
+.hero h1,
+.hero p {
+  color: white !important ;
+}
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  padding: 35px 25px;
+  color: black;
+  /* text-align: center; */
+  transition: 0.4s;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+.glass-card:hover {
+  transform: translateY(-12px);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+.btn-glass {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  border-radius: 50px;
+  transition: 0.3s;
+}
+.btn-glass:hover {
+  background: white;
+  color: #4f46e5;
+}
+.about {
+  display: grid;
+  gap: 50px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  background: transparent;
+}
+.col {
+  height: max-content;
+  width: 300px !important;
+}
+.card-img-top {
+  height: 200px;
+  object-fit: cover !important;
+}
+#courses {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 100px !important;
+  margin-bottom: 50px;
+}
+
+.carousel-img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.accordion-item {
+  background: transparent;
+  border: none;
+}
+.accordion-body {
+  background: transparent;
+}
+.accordion-flush .accordian-button:not(.collaspsed) {
+  background-color: #ffc107 !important;
+  color: #000 !important;
+  box-shadow: none !important;
+}
+.accordion-button {
+  background-color: transparent;
+  color: #000;
+}
+.accordion-button:focus {
+  border-color: #ffc107 !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.35) !important;
+}
+.elig{
+  margin-left: 60px !important;
+  
+}

@@ -1,0 +1,630 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>crestwood university</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+</head>
+
+<body>
+
+  <div id="about" class="hero p-5 mb-4 bg-body-tertiary ">
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-0 mb-4">
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
+
+        </a>
+      </div>
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="#about" class="nav-link px-2 btn btn-light link-light">About</a></li>
+        <li><a href="#courses" class="nav-link px-2 btn  link-light ">Courses</a></li>
+        <li><a href="#testimonials" class="nav-link px-2 btn  link-light">Admissions</a></li>
+        <li><a href="#gallery" class="nav-link px-2 btn link-light ">Campus Gallery</a></li>
+
+      </ul>
+      <div class="col-md-3 text-end">
+      </div>
+    </header>
+    <div class="  px-4 py-5 my-0  text-center ">
+      <h1 class=" display-3 fw-bold text-body-emphasis">Welcome to
+        <span class="text-warning"> Crestwood University</span>
+      </h1>
+      <div class="col-lg-6 mx-auto">
+        <p class=" lead mb-4 ">Empowering future innovators through world class education , industry partnership and a
+          vibrant campus community.</cutting-edge></p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+
+          <button class="btn btn-warning btn-lg px-4 gap-3" data-bs-toggle="modal" data-bs-target="#admissionModal">
+            Apply Now
+          </button>
+
+
+          <div class="modal fade" id="admissionModal" tabindex="-1" aria-labelledby="admissionModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="admissionModalLabel">Apply for Admission</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      <label class="form-label fw-bold text-warning">
+                        <i class="bi bi-mortarboard-fill"></i> Select Course
+                      </label>
+
+                      <select class="form-select border-warning shadow-sm" required>
+                        <option selected disabled>Choose your course</option>
+
+                        <optgroup label="Engineering">
+                          <option>B.Tech Computer Science Engineering</option>
+                          <option>B.Tech Artificial Intelligence & Machine Learning</option>
+                          <option>B.Tech Cloud Computing</option>
+                          <option>B.Tech Cyber Security</option>
+                          <option>B.Tech Information Technology</option>
+                          <option>B.Tech Electronics & Communication</option>
+                          <option>B.Tech Electrical Engineering</option>
+                          <option>B.Tech Mechanical Engineering</option>
+                          <option>B.Tech Civil Engineering</option>
+                          <option>B.Tech Biotechnology</option>
+                        </optgroup>
+
+                        <optgroup label="Management & Commerce">
+                          <option>BBA</option>
+                          <option>B.Com (Hons.)</option>
+                          <option>MBA</option>
+                        </optgroup>
+
+                        <optgroup label="Computer Applications">
+                          <option>BCA</option>
+                          <option>MCA</option>
+                        </optgroup>
+
+                        <optgroup label="Law">
+                          <option>B.A. LL.B.</option>
+                        </optgroup>
+
+                        <optgroup label="Postgraduate">
+                          <option>M.Tech</option>
+                        </optgroup>
+
+                      </select>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control border-warning" placeholder="Enter your name">
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control border-warning" placeholder="Enter your email">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Mobile Number</label>
+                        <input type="tel" class="form-control border-warning" placeholder="Enter mobile number">
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Date of Birth</label>
+                        <input type="date" class="form-control">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Gender</label>
+                        <select class="form-select">
+                          <option selected>Select</option>
+                          <option>Male</option>
+                          <option>Female</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">Class 12 Percentage</label>
+                        <input type="number" class="form-control" placeholder="e.g. 85%">
+                      </div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">City</label>
+                        <input type="text" class="form-control " placeholder="Enter your city">
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label">State</label>
+                        <input type="text" class="form-control" placeholder="Enter your state">
+                      </div>
+                    </div>
+
+                    <div class="form-check mb-3">
+                      <input class="form-check-input" type="checkbox" id="agree">
+                      <label class="form-check-label" for="agree">
+                        I agree to the Terms & Conditions.
+                      </label>
+                    </div>
+
+                  </form>
+                </div>
+
+
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                    Close
+                  </button>
+                  <button type="submit" class="btn btn-warning">
+                    Submit Application
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+          <button type="button" class="btn btn-outline-light btn-lg px-4" data-bs-toggle="modal"
+            data-bs-target="#contactModal">
+            contact Us
+          </button>
+
+          <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+              <div class="modal-content">
+
+
+                <div class="modal-header bg-warning text-white">
+                  <h5 class="modal-title" id="contactModalLabel">
+                    <i class="bi bi-envelope-fill text-warning"></i>
+                    Contact Us
+                  </h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+
+                <div class="modal-body">
+
+                  <form>
+
+                    <div class="row">
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Full Name</label>
+                        <input type="text" class="form-control border-warning" placeholder="Enter your full name"
+                          required>
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Email Address</label>
+                        <input type="email" class="form-control border-warning" placeholder="Enter your email" required>
+                      </div>
+
+                    </div>
+
+                    <div class="row">
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Phone Number</label>
+                        <input type="tel" class="form-control border-warning" placeholder="Enter phone number" required>
+                      </div>
+
+                      <div class="col-md-6 mb-3">
+                        <label class="form-label fw-semibold">Inquiry Type</label>
+                        <select class="form-select border-warning" required>
+                          <option selected disabled>Select Inquiry</option>
+                          <option>Admissions</option>
+                          <option>Courses</option>
+                          <option>Scholarships</option>
+                          <option>Placements</option>
+                          <option>Hostel</option>
+                          <option>General Inquiry</option>
+                        </select>
+                      </div>
+
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold">Subject</label>
+                      <input type="text" class="form-control border-warning" placeholder="Subject" required>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label fw-semibold">Message</label>
+                      <textarea class="form-control border-warning" rows="4" placeholder="Write your message here..."
+                        required></textarea>
+                    </div>
+
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="agreeContact" required>
+                      <label class="form-check-label" for="agreeContact">
+                        I agree to the Privacy Policy.
+                      </label>
+                    </div>
+                  </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">
+                    Close
+                  </button>
+
+                  <button type="submit" class="btn btn-warning fw-bold">
+                    <i class="bi bi-send-fill"></i> Send Message
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- About-->
+
+
+  <div id="about" class="container about mb-100  ">
+    <div class=" glass-card  mb-3" style="max-width: 18rem">
+      <div class="fw-bold card-header">History</div>
+      <div class="card-body">
+        <p class="card-text">
+        <ul>
+          <li>Established: 2008</li>
+          <li>Campus Area: 150 Acres</li>
+          <li>Students: 18,500+</li>
+          <li>Faculty Members: 900+</li>
+          <li>Academic Programs: 120+</li>
+          <li>Research Centers: 15</li>
+          <li>Countries Represented: 35+</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class=" glass-card  text-bg-transparent mb-3" style="max-width: 18rem">
+      <div class="fw-bold card-header">Vision</div>
+      <div class="card-body">
+        <p class="card-text">
+          "To become a globally recognized university that inspires innovation, leadership, and lifelong learning."
+        </p>
+      </div>
+    </div>
+    <div class="glass-card  text-bg-transparent mb-3" style="max-width: 18rem">
+      <div class="fw-bold card-header">Mission</div>
+      <div class="card-body">
+        <p class="card-text">
+        <ul>
+          <li> Deliver quality education. </li>
+          <li> Foster research and innovation. </li>
+          <li> Develop ethical leaders. </li>
+          <li> Build strong industry partnerships. </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="glass-card   text-bg-transparent mb-3" style="max-width: 18rem">
+      <div class=" fw-bold card-header">Quick Statistics</div>
+      <div class="card-body">
+        <p class="card-text">
+        <ul>
+          <li> 🎓 18,500+ Students</li>
+          <li> 👨‍🏫 900+ Faculty Members</li>
+          <li> 📚 120+ Programs</li>
+          <li> 🏢 700+ Recruiters</li>
+          <li> 💼 97% Placement Rate</li>
+          <li> 🌍 Students from 35+ Countries </li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="glass-card   text-bg-transparent mb-3" style="max-width: 18rem">
+      <div class=" fw-bold card-header">Rankings</div>
+      <div class="card-body">
+
+        <p class="card-text">
+        <ul>
+          <li> #5 Emerging Private University </li>
+          <li> Top 20 Engineering Institute</li>
+          <li> NAAC A++ Grade</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+    <div class="  glass-card   text-bg-transparent mb-3" style="max-width: 18rem">
+      <div class=" fw-bold card-header">Placement Section</div>
+      <div class="card-body">
+        <p class="card-text">
+        <ul>
+          <li> Placement Rate: 97%</li>
+          <li> Highest Package: ₹52 LPA</li>
+          <li>Average Package: ₹9.8 LPA</li>
+          <li>International Offers: 60+</li>
+          <li>Recruiters: 700+</li>
+        </ul>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- courses -->
+
+
+  <div id="courses" class="row  justify-content-md-center row-cols-2 row-cols-md-3 g-4 border-top">
+    <div class="  col">
+      <div class=" y67jcard  ">
+        <img src="./courses/cs.jpg" class="card-img-top" alt="engineer" />
+        <div class="card-body">
+          <h5 class="card-title">Computer Applications</h5>
+          <p class="card-text">
+            BCA ,MCA
+            <br>
+            Duration: 4 years
+            <br> Annual Fee: &#8377; 1,20,000
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+    <div class="  col">
+      <div class="  y67jcard">
+        <img src="./courses/eg.jpg" class="card-img-top" alt="engineer" />
+        <div class="card-body">
+          <h5 class="card-title"> Engineering</h5>
+          <p class="card-text">
+            B.Tech <br> Duration: 4 years
+            <br>Annual Fee: &#8377; 2,20,000
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="  y67jcard">
+        <img src="./courses/health.jpg" class="card-img-top" alt="health" />
+        <div class="card-body">
+          <h5 class="card-title"> Health Sciences</h5>
+          <p class="card-text">
+            BioTech <br> Duration: 4 years
+            <br> Annual Fee: &#8377; 2,10,000
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="  y67jcard">
+        <img src="./courses/buisness.jpg" class="card-img-top" alt="business" />
+        <div class="card-body">
+          <h5 class="card-title">Post Graduates</h5>
+          <p class="card-text">
+            M.Tech, MBA <br> Duration: 2 years
+            <br>Annual Fee: &#8377; 1,80,000 / year
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+    <div class=" col">
+      <div class="   y67jcard">
+        <img src="./courses/coomerce.jpg" class="card-img-top" alt="commerce" />
+        <div class="card-body">
+          <h5 class="card-title">Management and Commerce
+          </h5>
+          <p class="card-text">
+            BBA, B.Com <br> Duration: 3 years
+            <br> Annual Fee: &#8377; 1,10,000
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class=" y67jcard">
+        <img src="./courses/law.jpg" class="card-img-top" alt="law" />
+        <div class="card-body">
+          <h5 class="card-title">Law </h5>
+          <p class="card-text">
+            B.A. LLB <br> Duration: 5 years <br>
+            Annual Fee: &#8377; 1,50,000
+          </p>
+          <a href="#" class="btn btn-warning">Explore now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- admission process -->
+
+  <div id="testimonials" class="container px-4 py-5 ">
+    <h2 class="pb-2 border-bottom"> </h2>
+    <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+      <div class="col d-flex flex-column align-items-centre gap-2">
+        <h2 class="fw-bold text-body-emphasis ">FAQ's</h2>
+        <p class="text-body-secondary">
+        <div class="  accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
+            <div class=" accordion-item">
+              <h2 class=" accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  How do I apply?
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Apply online through the admissions portal.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  Are scholarships available?
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, for eligible students.</div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  Is hostel available?
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">Yes, separate hostels for boys and girls.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </p>
+      </div>
+
+      <div class="row ">
+        <div class="row elig row-cols-2 row-cols-sm-2 g-7">
+          <div class=" col d-flex flex-column gap-2 ">
+            <div
+              class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">🎓 Eligibility</h4>
+            <h5 class="card-title mt-2">Undergraduate</h5>
+            <p class="card-text">Class 12 pass <br>Minimum 60% marks</p>
+            <h5 class="card-title">Postgraduate</h5>
+            <p class="card-text">Bachelor's degree <br>Minimum 55% marks</p>
+            <h5 class="card-title">MBA</h5>
+            <p class="card-text">Bachelor's degree <br>Entrance exam preferred</p>
+
+          </div>
+          <div class=" col d-flex flex-column gap-2 ">
+            <div
+              class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-warning bg-gradient fs-4 rounded-3">
+            </div>
+            <h4 class="fw-semibold mb-0 text-body-emphasis">🎓 Deadlines</h4>
+            <h5 class="card-title mt-2">Applications Open</h5>
+            <p class="card-text">1 Mar 2026</p>
+            <h5 class="card-title">Last Date</h5>
+            <p class="card-text">30 Jun 2026</p>
+            <h5 class="card-title">Merit List</h5>
+            <p class="card-text">20 Jul 2026</p>
+            <h5 class="card-title">Class begins</h5>
+            <p class="card-text">10 August</p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- gallery  -->
+
+
+  <div id="gallery" class=" container carousel slide mb-10  ">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./crousel/classroom.jpg" class="d-block w-100 carousel-img " alt="classroom">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Classroom</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./crousel/lab.jpg" class="d-block w-100 carousel-img  " alt="laboratory">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Laboratory</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./crousel/lib.jpg" class="d-block w-100 carousel-img  " alt="library">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Library</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="./crousel/ground.jpg" class="d-block w-100 carousel-img  " alt="sports ground">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Sports Ground</h5>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+
+  <!-- footer -->
+  <div class="container">
+    <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5  border-top">
+      <div class="col mb-3"> <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none"
+          aria-label="Bootstrap"> <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+            <use xlink:href="#bootstrap"></use>
+          </svg> </a>
+        <p class="text-body-secondary ">© crestwood university 2026</p>
+      </div>
+      <div class="col mb-3"></div>
+      <div class="col mb-3">
+        <h5>Office Hours</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Monday – Friday <br> 9:00 AM –
+              5:00 PM</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Saturday <br> 9:00 AM – 1:00
+              PM</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sunday Closed</a></li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+        <h5>Visit Us!</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Crestwood University</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Innovation Park, KnowledgeCity,
+              Bengaluru, Karnataka 56000</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">+9198765 43210 </a></li>
+          <li class="nav-item mb-2"><a href="#"
+              class="nav-link p-0 text-body-secondary">admissions@crestwooduniversity.edu</a></li>
+        </ul>
+      </div>
+      <div class="col mb-3">
+      </div>
+    </footer>
+  </div>
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
