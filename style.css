@@ -29,12 +29,12 @@ body {
   min-height: 100vh;
   font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-light);
-  /* Professional Deep Academic Navy background with subtle ambient glows */
+  /* Professional Academic Navy background - slightly lighter, vibrant & luminous */
   background: 
-    radial-gradient(circle at 12% 18%, rgba(29, 59, 102, 0.45) 0%, transparent 40%),
-    radial-gradient(circle at 88% 35%, rgba(255, 193, 7, 0.08) 0%, transparent 35%),
-    radial-gradient(circle at 50% 75%, rgba(19, 39, 67, 0.6) 0%, transparent 50%),
-    linear-gradient(160deg, #07111e 0%, #0b1a30 35%, #0f2340 70%, #081220 100%);
+    radial-gradient(circle at 12% 18%, rgba(37, 78, 138, 0.4) 0%, transparent 45%),
+    radial-gradient(circle at 88% 35%, rgba(255, 193, 7, 0.1) 0%, transparent 40%),
+    radial-gradient(circle at 50% 75%, rgba(29, 59, 102, 0.5) 0%, transparent 55%),
+    linear-gradient(160deg, #0a192f 0%, #0e223d 35%, #132b4d 70%, #0b1c33 100%);
   background-attachment: fixed;
   background-size: cover;
   overflow-x: hidden;
@@ -56,29 +56,34 @@ body {
 }
 
 /* ==========================================================================
-   Hero Section & Header
+   Hero Section & Header (Lightened background overlay for clear visibility)
    ========================================================================== */
 
 .hero {
   width: 100%;
   min-height: 100vh;
-  background-size: cover;
-  background-position: center;
   position: relative;
   background:
-    linear-gradient(rgba(7, 17, 30, 0.78), rgba(11, 26, 48, 0.85)),
-    url('./crestwoodimage.png');
+    linear-gradient(rgba(10, 25, 47, 0.42), rgba(13, 33, 62, 0.52)),
+    url('crestwoodimage.jpg'),
+    url('crestwoodimage.png');
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding: 1.5rem 1.25rem 3rem 1.25rem;
 }
 
-.hero h1,
+.hero h1 {
+  color: #ffffff !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.7);
+}
+
 .hero p {
   color: #ffffff !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 /* Crestwood Brand */
@@ -91,6 +96,7 @@ body {
   align-items: center;
   gap: 10px;
   transition: opacity 0.2s ease;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
 }
 
 .brand-logo:hover {
@@ -123,14 +129,14 @@ body {
   font-weight: 600;
   padding: 8px 18px;
   border-radius: 50px;
-  background: rgba(19, 39, 67, 0.65);
+  background: rgba(13, 27, 49, 0.75);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   text-decoration: none;
   display: inline-block;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* FIXED NAVBAR HOVER ON EACH BUTTON */
@@ -167,14 +173,17 @@ body {
 }
 
 .btn-outline-light {
-  border-color: rgba(255, 255, 255, 0.4) !important;
+  border-color: rgba(255, 255, 255, 0.5) !important;
   color: #ffffff !important;
   font-weight: 600;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.25);
   transition: all 0.3s ease;
 }
 
 .btn-outline-light:hover {
-  background: rgba(255, 255, 255, 0.15) !important;
+  background: rgba(255, 255, 255, 0.2) !important;
   border-color: #ffffff !important;
   color: #ffffff !important;
   transform: translateY(-2px);
@@ -274,6 +283,7 @@ body {
   height: 210px;
   width: 100%;
   object-fit: cover !important;
+  background-color: #0b1a30;
   transition: transform 0.45s ease;
 }
 
@@ -422,6 +432,7 @@ body {
   height: clamp(260px, 50vw, 520px);
   object-fit: cover;
   width: 100%;
+  background-color: #0b1a30;
 }
 
 .carousel-caption {

@@ -1,5 +1,25 @@
-// Crestwood University - Interactive Features & Nav Scrollspy
+// Crestwood University - Image Preloading & Interactive Features
 document.addEventListener('DOMContentLoaded', () => {
+  // Preload all critical images into browser cache
+  const imagesToPreload = [
+    'crestwoodimage.jpg',
+    'crousel/classroom.jpg',
+    'crousel/lab.jpg',
+    'crousel/lib.jpg',
+    'crousel/ground.jpg',
+    'courses/cs.jpg',
+    'courses/engineering.jpg',
+    'courses/health.jpg',
+    'courses/postgraduate.jpg',
+    'courses/management.jpg',
+    'courses/law.jpg',
+  ];
+
+  imagesToPreload.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+  });
+
   const navLinks = document.querySelectorAll('.custom-nav .nav-link');
   const sections = document.querySelectorAll('section, div.hero');
 
@@ -37,4 +57,3 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
-
