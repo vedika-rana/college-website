@@ -1,101 +1,653 @@
-body {
-  background: linear-gradient(135deg, #d8a039, rgb(255, 255, 255), #e2cd64);
-  min-height: 100vh;
+/* ==========================================================================
+   Crestwood University - Theme: Academic Navy Blue & Warm Golden Yellow
+   ========================================================================== */
 
-  font-family: Arial, Helvetica, sans-serif;
+:root {
+  --primary-blue: #0b1a30;
+  --secondary-blue: #132743;
+  --accent-blue: #1d3b66;
+  --accent-yellow: #ffc107;
+  --accent-yellow-hover: #ffcd39;
+  --accent-yellow-dark: #d99b00;
+  --text-light: #f8fafc;
+  --text-muted: #94a3b8;
+  --card-bg: rgba(14, 29, 53, 0.72);
+  --card-border: rgba(255, 255, 255, 0.12);
+  --card-border-gold: rgba(255, 193, 7, 0.35);
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Segoe UI', system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-light);
+  /* Professional Deep Academic Navy background with subtle ambient glows */
+  background: 
+    radial-gradient(circle at 12% 18%, rgba(29, 59, 102, 0.45) 0%, transparent 40%),
+    radial-gradient(circle at 88% 35%, rgba(255, 193, 7, 0.08) 0%, transparent 35%),
+    radial-gradient(circle at 50% 75%, rgba(19, 39, 67, 0.6) 0%, transparent 50%),
+    linear-gradient(160deg, #07111e 0%, #0b1a30 35%, #0f2340 70%, #081220 100%);
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+/* Section Title Accents */
+.section-title {
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem;
+}
+
+.section-divider {
+  width: 60px;
+  height: 4px;
+  background: var(--accent-yellow);
+  border-radius: 2px;
+  margin: 12px auto 24px auto;
+}
+
+/* ==========================================================================
+   Hero Section & Header
+   ========================================================================== */
+
 .hero {
   width: 100%;
-  height: 100vh;
-  /* background-image: url(./crestwoodimage.png); */
-  /* filter: blur(1px); */
+  min-height: 100vh;
   background-size: cover;
   background-position: center;
   position: relative;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
-    url(./crestwoodimage.png);
-}
-.hero h1,
-.hero p {
-  color: white !important ;
-}
-.glass-card {
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(3px);
-  -webkit-backdrop-filter: blur(3px);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  padding: 35px 25px;
-  color: black;
-  /* text-align: center; */
-  transition: 0.4s;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-}
-.glass-card:hover {
-  transform: translateY(-12px);
-  background: rgba(255, 255, 255, 0.18);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
-}
-.btn-glass {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
-  border-radius: 50px;
-  transition: 0.3s;
-}
-.btn-glass:hover {
-  background: white;
-  color: #4f46e5;
-}
-.about {
-  display: grid;
-  gap: 50px;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  background: transparent;
-}
-.col {
-  height: max-content;
-  width: 300px !important;
-}
-.card-img-top {
-  height: 200px;
-  object-fit: cover !important;
-}
-#courses {
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-top: 100px !important;
-  margin-bottom: 50px;
+    linear-gradient(rgba(7, 17, 30, 0.78), rgba(11, 26, 48, 0.85)),
+    url('./crestwoodimage.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem 1.25rem 3rem 1.25rem;
 }
 
-.carousel-img {
-  height: 500px;
-  object-fit: cover;
+.hero h1,
+.hero p {
+  color: #ffffff !important;
+}
+
+/* Crestwood Brand */
+.brand-logo {
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: opacity 0.2s ease;
+}
+
+.brand-logo:hover {
+  color: var(--accent-yellow);
+}
+
+.brand-logo i {
+  color: var(--accent-yellow);
+  font-size: 1.6rem;
+}
+
+/* ==========================================================================
+   Navbar & Button Hover Fixes
+   ========================================================================== */
+
+.custom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.custom-nav .nav-link {
+  color: #f1f5f9 !important;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 18px;
+  border-radius: 50px;
+  background: rgba(19, 39, 67, 0.65);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* FIXED NAVBAR HOVER ON EACH BUTTON */
+.custom-nav .nav-link:hover,
+.custom-nav .nav-link:focus,
+.custom-nav .nav-link.active {
+  color: #07111e !important;
+  background: var(--accent-yellow) !important;
+  border-color: var(--accent-yellow) !important;
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.45);
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-warning {
+  background-color: var(--accent-yellow) !important;
+  border-color: var(--accent-yellow) !important;
+  color: #07111e !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: var(--accent-yellow-hover) !important;
+  border-color: var(--accent-yellow-hover) !important;
+  color: #000000 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 22px rgba(255, 193, 7, 0.5);
+}
+
+.btn-outline-light {
+  border-color: rgba(255, 255, 255, 0.4) !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
+  transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   About Section & Glass Cards
+   ========================================================================== */
+
+.about {
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  background: transparent;
+  padding: 0;
+}
+
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 28px 24px;
+  color: var(--text-light);
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-card:hover {
+  transform: translateY(-8px);
+  background: rgba(19, 39, 67, 0.85);
+  border-color: var(--card-border-gold);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 193, 7, 0.15);
+}
+
+.glass-card .card-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.25);
+  color: var(--accent-yellow);
+  font-size: 1.25rem;
+  font-weight: 700;
+  padding: 0 0 12px 0;
+  margin-bottom: 16px;
+}
+
+.glass-card .card-body {
+  padding: 0;
+  flex-grow: 1;
+}
+
+.glass-card ul {
+  padding-left: 20px;
+  margin-bottom: 0;
+}
+
+.glass-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: #e2e8f0;
+}
+
+.glass-card p {
+  color: #e2e8f0;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Courses Section
+   ========================================================================== */
+
+.y67jcard {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.25);
+}
+
+.y67jcard:hover {
+  transform: translateY(-8px);
+  border-color: var(--card-border-gold);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45), 0 0 25px rgba(255, 193, 7, 0.15);
+}
+
+.card-img-top {
+  height: 210px;
+  width: 100%;
+  object-fit: cover !important;
+  transition: transform 0.45s ease;
+}
+
+.y67jcard:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+.y67jcard .card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.y67jcard .card-title {
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.y67jcard .card-text {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.y67jcard .btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 8px 20px;
+  border-radius: 8px;
+}
+
+/* ==========================================================================
+   Admissions Section & Accordion
+   ========================================================================== */
+
+.accordion {
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: transparent;
 }
 
 .accordion-item {
-  background: transparent;
-  border: none;
+  background: var(--card-bg) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border) !important;
+  border-radius: 12px !important;
+  margin-bottom: 14px;
+  overflow: hidden;
 }
-.accordion-body {
-  background: transparent;
+
+.accordion-button {
+  background: transparent !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 1.1rem 1.25rem;
+  transition: all 0.25s ease;
 }
-.accordion-flush .accordian-button:not(.collaspsed) {
-  background-color: #ffc107 !important;
-  color: #000 !important;
+
+.accordion-button:not(.collapsed) {
+  background: rgba(255, 193, 7, 0.15) !important;
+  color: var(--accent-yellow) !important;
+  border-bottom: 1px solid rgba(255, 193, 7, 0.2);
   box-shadow: none !important;
 }
-.accordion-button {
-  background-color: transparent;
-  color: #000;
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+  transition: transform 0.25s ease;
 }
+
+.accordion-button:not(.collapsed)::after {
+  filter: invert(0.8) sepia(1) saturate(5) hue-rotate(5deg);
+}
+
 .accordion-button:focus {
-  border-color: #ffc107 !important;
-  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.35) !important;
+  border-color: var(--accent-yellow) !important;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25) !important;
 }
-.elig{
-  margin-left: 60px !important;
-  
+
+.accordion-body {
+  color: #cbd5e1 !important;
+  background: transparent !important;
+  padding: 1.1rem 1.25rem;
+  line-height: 1.6;
+}
+
+/* Eligibility & Deadlines Cards */
+.elig-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 24px;
+  height: 100%;
+  color: var(--text-light);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.elig-card:hover {
+  border-color: var(--card-border-gold);
+  transform: translateY(-4px);
+}
+
+.elig-card h4 {
+  color: var(--accent-yellow);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.elig-card h5 {
+  color: #ffffff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.elig-card p {
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   Campus Gallery (Carousel)
+   ========================================================================== */
+
+.carousel {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--card-border);
+}
+
+.carousel-img {
+  height: clamp(260px, 50vw, 520px);
+  object-fit: cover;
+  width: 100%;
+}
+
+.carousel-caption {
+  background: rgba(7, 17, 30, 0.75);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 10px;
+  padding: 8px 20px;
+  display: inline-block;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+}
+
+.carousel-caption h5 {
+  color: var(--accent-yellow);
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin: 0 6px;
+  background-color: #ffffff;
+  opacity: 0.5;
+  transition: all 0.3s ease;
+}
+
+.carousel-indicators .active {
+  background-color: var(--accent-yellow);
+  opacity: 1;
+  width: 28px;
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Modals
+   ========================================================================== */
+
+.modal-content {
+  background: #0d1e36;
+  color: #ffffff;
+  border: 1px solid var(--card-border-gold);
+  border-radius: 18px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+}
+
+.modal-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-header.bg-warning {
+  background-color: var(--accent-yellow) !important;
+  color: #07111e !important;
+}
+
+.modal-header.bg-warning .modal-title,
+.modal-header.bg-warning i {
+  color: #07111e !important;
+}
+
+.modal-body {
+  padding: 1.5rem;
+}
+
+.modal-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 1.25rem 1.5rem;
+}
+
+.modal-content .form-control,
+.modal-content .form-select {
+  background-color: rgba(7, 17, 30, 0.7);
+  border: 1px solid rgba(255, 193, 7, 0.4);
+  color: #ffffff;
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+
+.modal-content .form-control:focus,
+.modal-content .form-select:focus {
+  background-color: rgba(11, 26, 48, 0.9);
+  color: #ffffff;
+  border-color: var(--accent-yellow);
+  box-shadow: 0 0 0 0.25rem rgba(255, 193, 7, 0.25);
+}
+
+.modal-content .form-control::placeholder {
+  color: #94a3b8;
+}
+
+.modal-content .form-label {
+  color: #e2e8f0;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  color: var(--text-muted);
+}
+
+footer h5 {
+  color: var(--accent-yellow);
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin-bottom: 1.2rem;
+}
+
+footer .nav-link {
+  color: #cbd5e1 !important;
+  padding: 4px 0 !important;
+  transition: color 0.2s ease, transform 0.2s ease;
+  display: inline-block;
+}
+
+footer .nav-link:hover {
+  color: var(--accent-yellow) !important;
+  transform: translateX(4px);
+}
+
+/* ==========================================================================
+   404 Page Styles
+   ========================================================================== */
+
+.page-404-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-404-title {
+  font-size: clamp(5rem, 15vw, 10rem);
+  font-weight: 900;
+  color: var(--accent-yellow);
+  line-height: 1;
+  text-shadow: 0 8px 30px rgba(255, 193, 7, 0.35);
+  margin-bottom: 1rem;
+}
+
+.page-404-subtitle {
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.page-404-desc {
+  max-width: 500px;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* ==========================================================================
+   Responsiveness & Media Queries
+   ========================================================================== */
+
+@media (max-width: 991.98px) {
+  .hero {
+    min-height: auto;
+    padding: 1.5rem 1rem 3rem 1rem;
+  }
+
+  .custom-nav {
+    margin-top: 0.75rem;
+  }
+
+  .custom-nav .nav-link {
+    padding: 7px 14px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero {
+    padding: 1rem 0.75rem 2.5rem 0.75rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem !important;
+  }
+
+  .hero p.lead {
+    font-size: 1.05rem !important;
+  }
+
+  .custom-nav {
+    gap: 6px;
+  }
+
+  .custom-nav .nav-link {
+    padding: 6px 12px;
+    font-size: 0.82rem;
+  }
+
+  .glass-card {
+    padding: 22px 18px;
+  }
+
+  .elig-card {
+    padding: 20px 16px;
+  }
+
+  .carousel-caption {
+    padding: 6px 14px;
+    bottom: 14px;
+  }
+
+  .carousel-caption h5 {
+    font-size: 1rem;
+  }
 }
